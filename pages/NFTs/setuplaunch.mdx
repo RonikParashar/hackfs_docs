@@ -4,28 +4,28 @@ title: Setup Launch
 
 # Retrive Deployed Collection Details
 
-The /setupLaunch API is a crucial endpoint that allows the configuration of launch parameters for a specific NFT collection. By providing the necessary request parameters, the API enables the setup of important details such as pricing, sale start times, and whitelisting for the presale phase. These parameters play a significant role in determining the success and functionality of the NFT collection launch.
+The /setupLaunch API is a crucial endpoint that allows the configuration of launch parameters for a specific NFT collection. By providing the necessary request parameters, the API enables the setup of important details such as pricing, sale start times, and whitelisting for the presale phase. These parameters play a significant role in determining the success and functionality of the NFTGenesis.
 
 ## Authentication
 
-All requests to our GET API require authentication. You will need to include your API key in the header of each request. You can find your API key in the "API Keys" section of your PerkVenue dashboard.
+All requests to our GET API require authentication. You will need to include your API key in the header of each request. You can find your API key in the "API Keys" section of your dashboard.
 
 ## Endpoint
 
 The endpoint for the NFT Minting API is:
 
-`POST /nft/setupLaunch`
+`POST /collections/setupLaunch`
 
 ## Request Headers
 
 The following request header is required to use the NFT Minting API:
 
-- `Authorization` - Your PerkVenue API key
+- `Authorization` - Your API key
 
 ## Retrive all minted NFTs
 
 ```json
-POST /nft/setupLaunch 
+POST /collections/setupLaunch 
 Content-Type: application/json
 ```
 
@@ -103,6 +103,6 @@ In case of an error, the API will respond with a JSON object containing an error
 
 ## Conclusion
 
-The /setupLaunch API is a vital component of the NFT collection launch process, allowing for the proper configuration of launch parameters. By providing the necessary request parameters, businesses or developers can define crucial details such as pricing, sale start times, and presale whitelisting. This API streamlines the process of setting up the launch, ensuring that all necessary parameters are accurately defined.
+The /setupLaunch API is a vital component of the process, allowing for the proper configuration of launch parameters. By providing the necessary request parameters, businesses or developers can define crucial details such as pricing, sale start times, and presale whitelisting. This API streamlines the process of setting up the launch, ensuring that all necessary parameters are accurately defined.
 
 With the flexibility offered by the /setupLaunch API, businesses and developers can easily adapt the launch parameters to meet their specific requirements. By customizing these parameters, they can optimize the launch strategy and create a successful NFT collection.

@@ -1,5 +1,5 @@
 ---
-title: Publicsale Mint
+title: Public-sale Mint
 ---
 
 # Public Sale Mint
@@ -8,19 +8,19 @@ The `/publicsaleMint` API allows for the minting of NFTs during the public sale 
 
 ## Authentication
 
-All requests to our API require authentication. You will need to include your API key in the header of each request. You can find your API key in the "API Keys" section of your PerkVenue dashboard.
+All requests to our API require authentication. You will need to include your API key in the header of each request. You can find your API key in the "API Keys" section of your dashboard.
 
 ## Endpoint
 
 The endpoint for the Public Sale Mint API is:
 
-`POST /nft/publicsalemint`
+`POST /collections/publicsalemint`
 
 ## Request Headers
 
 The following request header is required to use the Public Sale Mint API:
 
-- `Authorization` - Your PerkVenue API key
+- `Authorization` - Your API key
 
 ## Request Parameters
 
@@ -33,7 +33,7 @@ The following request parameters are required for the Public Sale Mint API:
 ### Example Request
 
 ```json
-POST /nft/publicsaleMint
+POST /collections/publicsaleMint
 Content-Type: application/json
 
 {
@@ -73,4 +73,4 @@ In case of an error, the API will respond with a JSON object containing an error
 
 The Public Sale Mint API provides a convenient way to mint NFTs during the public sale phase of an NFT collection. By specifying the contract address and the public sale mint price, businesses or developers can facilitate the minting process for interested participants. The response containing the public sale mint transaction hash allows for easy tracking and verification of the minting operation.
 
-By incorporating the Public Sale Mint API into their applications or platforms, businesses can seamlessly integrate public sale mint functionality and enhance the overall user experience during the NFT collection launch.
+By incorporating the Public Sale Mint API into their applications or platforms, businesses can seamlessly integrate public sale mint functionality and enhance the overall user experience during the NFTGenesis.

@@ -2,14 +2,14 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>PerkVenue</span>,
+  logo: <span>NFTGenesis</span>,
   project: {
-    link: 'https://github.com/hrsh22/reward-system-docs',
+    link: 'https://github.com/hrsh22/hackfs',
   },
 
-  docsRepositoryBase: 'https://github.com/hrsh22/reward-system-docs',
+  docsRepositoryBase: 'https://github.com/RonikParashar/hackfs_docs',
   footer: {
-    text: 'Reward System Docs',
+    text: 'NFTGenesis Documentation',
   },
 }
 
