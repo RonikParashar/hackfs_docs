@@ -1,0 +1,76 @@
+---
+title: Public Sale Mint
+---
+
+# Public Sale Mint
+
+The `/publicsaleMint` API allows for the minting of NFTs during the public sale phase of a specific NFT collection. This endpoint requires the following request parameters and provides the corresponding response.
+
+## Authentication
+
+All requests to our API require authentication. You will need to include your API key in the header of each request. You can find your API key in the "API Keys" section of your PerkVenue dashboard.
+
+## Endpoint
+
+The endpoint for the Public Sale Mint API is:
+
+`POST /nft/publicsaleMint`
+
+## Request Headers
+
+The following request header is required to use the Public Sale Mint API:
+
+- `Authorization` - Your PerkVenue API key
+
+## Request Parameters
+
+The following request parameters are required for the Public Sale Mint API:
+
+- `contractAddress` (string): The address of the NFT collection contract.
+
+- `publicsaleMintPrice` (number): The price for minting NFTs during the public sale phase.
+
+### Example Request
+
+```json
+POST /nft/publicsaleMint
+Content-Type: application/json
+
+{
+  "contractAddress": "0x123abc",
+  "publicsaleMintPrice": 0.1
+}
+```
+
+## Response
+
+The API will respond with a JSON object containing the following information:
+
+- `publicsaleMintTx` (string): The transaction hash or identifier for the public sale mint transaction.
+
+### Example Response
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "publicsaleMintTx": "0xabc123def456"
+}
+```
+
+### Error Responses
+
+In case of an error, the API will respond with a JSON object containing an error message:
+
+```json
+{
+  "error": "Error message"
+}
+```
+
+## Conclusion
+
+The Public Sale Mint API provides a convenient way to mint NFTs during the public sale phase of an NFT collection. By specifying the contract address and the public sale mint price, businesses or developers can facilitate the minting process for interested participants. The response containing the public sale mint transaction hash allows for easy tracking and verification of the minting operation.
+
+By incorporating the Public Sale Mint API into their applications or platforms, businesses can seamlessly integrate public sale mint functionality and enhance the overall user experience during the NFT collection launch.
