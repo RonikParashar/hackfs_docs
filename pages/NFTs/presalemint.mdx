@@ -1,0 +1,76 @@
+---
+title: Presale Mint
+---
+
+# Presale Mint
+
+The `/presaleMint` API allows for the minting of NFTs during the presale phase of a specific NFT collection. This endpoint requires the following request parameters and provides the corresponding response.
+
+## Authentication
+
+All requests to our API require authentication. You will need to include your API key in the header of each request. You can find your API key in the "API Keys" section of your PerkVenue dashboard.
+
+## Endpoint
+
+The endpoint for the Presale Mint API is:
+
+`POST /nft/presalemint`
+
+## Request Headers
+
+The following request header is required to use the Presale Mint API:
+
+- `Authorization` - Your PerkVenue API key
+
+## Request Parameters
+
+The following request parameters are required for the Presale Mint API:
+
+- `contractAddress` : The address of the NFT collection contract.
+
+- `presaleMintPrice`: The price for minting NFTs during the presale phase.
+
+### Example Request
+
+```json
+POST /nft/presaleMint
+Content-Type: application/json
+
+{
+  "contractAddress": "0x123abc",
+  "presaleMintPrice": 0.05
+}
+```
+
+## Response
+
+The API will respond with a JSON object containing the following information:
+
+- `presaleMintTx`: The transaction hash or identifier for the presale mint transaction.
+
+### Example Response
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "presaleMintTx": "0xabc123def456"
+}
+```
+
+### Error Responses
+
+In case of an error, the API will respond with a JSON object containing an error message:
+
+```json
+{
+  "error": "Error message"
+}
+```
+
+## Conclusion
+
+The Presale Mint API provides a convenient way to mint NFTs during the presale phase of an NFT collection. By specifying the contract address and the presale mint price, businesses or developers can facilitate the minting process for interested participants. The response containing the presale mint transaction hash allows for easy tracking and verification of the minting operation.
+
+By incorporating the Presale Mint API into their applications or platforms, businesses can seamlessly integrate presale mint functionality and enhance the overall user experience during the NFT collection launch.
