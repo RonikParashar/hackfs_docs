@@ -13,7 +13,7 @@ All requests to our GET API require authentication. You will need to include you
 
 The endpoint for the NFT Minting API is:
 
-`POST /nft/deploycollection`
+`POST /nft/deploy`
 
 ## Request Headers
 
@@ -36,7 +36,9 @@ The following request parameters are required to get details of a specific minte
 
 - `name` - The name of the NFT collection.
 - `symbol`- The symbol of the token collection.
-- `symbol`- Maximum number of NFTs that can be minted from this collection.
+- `maxSupply`- Maximum number of NFTs that can be minted from this collection.
+- `teamReserve`- The number or percentage of tokens that will be reserved for the team members.
+- `ownerAddress`- The address of the current owner of the NFT.
 ### Example Request
 
 ```json
@@ -49,7 +51,9 @@ Authorization: YOUR_API_KEY_HERE
 {
     "name": "Collection-1",
     "symbol": "C4-31M",
-    "maxSupply": 3
+    "maxSupply": 3,
+    "teamReserve":,
+    "ownerAddress": "0xB78721b29c028B16ab25f4a2adE1d25fbf8B2d74"
 }
 
 ```
@@ -58,13 +62,13 @@ Authorization: YOUR_API_KEY_HERE
 
 The API will respond with a JSON object containing the following information:
 
-- `contractAddress`: Contract Address of the NFT collection.
+- `collectionAddress`: The address of the deployed collection on the blockchain.
 
 ### Example Response
 
 ```json
 {
-    "contractAddress": "0x753F05564C76dF90bB6d5C23F85e4F2041e5D846"
+    "collectionAddress": "0x753F05564C76dF90bB6d5C23F85e4F2041e5D846"
 }
 ```
 
